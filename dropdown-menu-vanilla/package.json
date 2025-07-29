@@ -1,0 +1,13 @@
+{
+  "name": "dropdown-menu-vanilla",
+  "version": "1.0.0",
+  "description": "Dropdown menu",
+  "main": "dropdown-menu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["dropdown", "menu", "component", "vanilla", "frontend"],
+  "author": "Prince Obot princessamuel45@gmail.com",
+  "license": "ISC",
+  "type": "commonjs"
+}
