@@ -16,7 +16,7 @@ class DropdownMenu {
   }
 
   _closeDropdownMenu(e) {
-    if (this.dropdownToggleBtn === e.target || this.dropdownMenu.contains(e.target)) return;
+    if (this.dropdownToggleBtn === e.target) return;
 
     this.dropdownMenu.classList.add('hide');
   }
