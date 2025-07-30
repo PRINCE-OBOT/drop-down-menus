@@ -1,13 +1,17 @@
 {
   "name": "dropdown-menu-vanilla",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dropdown menu",
-  "main": "dropdown-menu.js",
+  "main": "index.cjs",
+  "module": "index.mjs",
+  "exports": {
+    "require": "index.cjs",
+    "import": "index.mjs"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["dropdown", "menu", "component", "vanilla", "frontend"],
   "author": "Prince Obot princessamuel45@gmail.com",
-  "license": "ISC",
-  "type": "commonjs"
+  "license": "ISC"
 }

@@ -1,12 +1,12 @@
 class DropdownMenu {
-  constructor({ dropdownMenu, dropdownBtn }) {
+  constructor({ dropdownMenu, dropdownToggleBtn }) {
     this.dropdownMenu = dropdownMenu;
-    this.dropdownBtn = dropdownBtn;
+    this.dropdownToggleBtn = dropdownToggleBtn;
     this.bindEvent = this._bindEvent();
   }
 
   _bindEvent() {
-    this.dropdownBtn.addEventListener('click', this._toggleDropdownMenu.bind(this));
+    this.dropdownToggleBtn.addEventListener('click', this._toggleDropdownMenu.bind(this));
 
     document.addEventListener('click', this._closeDropdownMenu.bind(this));
   }
@@ -16,7 +16,7 @@ class DropdownMenu {
   }
 
   _closeDropdownMenu(e) {
-    if (this.dropdownBtn === e.target) return;
+    if (this.dropdownToggleBtn === e.target) return;
 
     this.dropdownMenu.classList.add('hide');
   }

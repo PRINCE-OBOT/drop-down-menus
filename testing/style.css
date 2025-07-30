@@ -1,0 +1,3 @@
+:where(.drop-down_menu, .drop-down_menu2).hide{
+    display: none;
+  }

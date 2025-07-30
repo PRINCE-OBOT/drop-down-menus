@@ -7,14 +7,14 @@ const dropItem2 = document.querySelector('.drop-down_menu2');
 const dropBtn2 = document.querySelector('.drop-down_btn2');
 
 class DropdownMenu {
-  constructor({ dropdownMenu, dropdownBtn }) {
+  constructor({ dropdownToggleBtn, dropdownMenu }) {
     this.dropdownMenu = dropdownMenu;
-    this.dropdownBtn = dropdownBtn;
+    this.dropdownToggleBtn = dropdownToggleBtn;
     this.bindEvent = this._bindEvent();
   }
 
   _bindEvent() {
-    this.dropdownBtn.addEventListener('click', this._toggleDropdownMenu.bind(this));
+    this.dropdownToggleBtn.addEventListener('click', this._toggleDropdownMenu.bind(this));
 
     document.addEventListener('click', this._closeDropdownMenu.bind(this));
   }
@@ -24,11 +24,11 @@ class DropdownMenu {
   }
 
   _closeDropdownMenu(e) {
-    if (this.dropdownBtn === e.target) return;
+   if (this.dropdownToggleBtn === e.target || this.dropdownMenu.contains(e.target)) return;
 
     this.dropdownMenu.classList.add('hide');
   }
 }
 
-new DropdownMenu({ dropdownBtn: dropBtn, dropdownMenu: dropItem });
-new DropdownMenu({ dropdownBtn: dropBtn2, dropdownMenu: dropItem2 });
+new DropdownMenu({ dropdownToggleBtn: dropBtn, dropdownMenu: dropItem });
+new DropdownMenu({ dropdownToggleBtn: dropBtn2, dropdownMenu: dropItem2 });
